@@ -576,7 +576,7 @@ svg.i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke
 #app-messages>.sheet{z-index:15}
 #app-messages .sheet .sheet{z-index:16}
 /* ---------- MESSAGES v2: gambar, pin, grup, siluet, preview-only ---------- */
-.mc-img{position:relative;max-width:64%;margin-top:2px;border-radius:19px;overflow:hidden;line-height:0}
+.mc-img{flex:none;position:relative;max-width:64%;margin-top:2px;border-radius:19px;overflow:hidden;line-height:0}
 .mc-img.first{margin-top:8px}
 .mc-img.out{align-self:flex-end}.mc-img.in{align-self:flex-start}
 .mc-img img{display:block;max-width:100%;max-height:340px;width:auto;height:auto;border-radius:19px}
