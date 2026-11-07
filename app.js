@@ -92,18 +92,6 @@ const CONTACTS = ['Baby', 'Eiser', 'Evander', 'Keenan', 'Kianabelle', 'Maxton', 
    Baris "#hari jam" = mulai hari baru. (#0 12:00 = hari ini, #2 = 2 hari lalu, "-5m" = 5 menit lalu)
    Baris "@HH:MM" = loncat jam.                                                         */
 
-// Story (urutan = urutan lingkaran). Gambar di assets/stories/ — ganti dengan foto kamu (nama sama).
-const STORIES = [
-  { id: 'me',      name: 'My Story', who: 'Shabey',   items: [
-    { img: 'assets/stories/me-1.jpg', h: 1 }, { img: 'assets/stories/me-2.jpg', h: 3 },
-    { img: 'assets/stories/me-3.jpg', h: 5 }, { img: 'assets/stories/me-4.jpg', h: 8 } ] },
-  { id: 'baby',    name: 'Baby',     who: 'Baby',    items: [
-    { img: 'assets/stories/baby-1.jpg', h: 2 }, { img: 'assets/stories/baby-2.jpg', h: 4 }, { img: 'assets/stories/baby-3.jpg', h: 6 } ] },
-  { id: 'maxton',  name: 'Maxton',   who: 'Maxton',  items: [{ img: 'assets/stories/maxton-1.jpg', h: 3 }] },
-  { id: 'evander', name: 'Evander',  who: 'Evander', items: [{ img: 'assets/stories/evander-1.jpg', h: 5 }] },
-  { id: 'eiser',   name: 'Eiser',    who: 'Eiser',   items: [{ img: 'assets/stories/eiser-1.jpg', h: 9 }] },
-];
-const STORY_MS = 5000; // (data story lama, tidak dipakai di Messages)
 
 // Foto avatar kontak. Upload fotonya ke assets/avatars/ dengan nama file di bawah.
 // Kalau file belum ada, otomatis tampil inisial berwarna. Nama tidak peka huruf besar/kecil.
@@ -141,7 +129,7 @@ const MSG_CONTACTS = ['Marshall', 'Falds', 'Mr. Keen', 'Jo', 'Shanina', 'Jansen'
 
 const CHATS = [
   { id: 'marshall', name: 'Marshall', days: [
-    { when: { ago: 1, time: '20:00' }, msgs: [
+    { when: { ago: 1, time: '14:37' }, msgs: [
       ['Shabey', { img: 'marshall-d1-shabey' }],
       ['Shabey', 'Exclusive content for my cranky baby'],
       ['Marshall', 'Cantik banget hari ini'],
@@ -152,7 +140,7 @@ const CHATS = [
       ['Marshall', "I'll kiss you all night"],
       ['Shabey', 'Mauuu'],
     ] },
-    { when: { ago: 0, time: '08:00' }, msgs: [
+    { when: { ago: 0, time: '14:46' }, step: 26000, msgs: [   // step = jarak antar pesan (ms): gambar ke-3 jatuh sekitar 14:54
       ['Marshall', { img: 'marshall-d2-marshall' }],
       ['Marshall', 'Baru bangun'],
       ['Marshall', 'Looking for my girlfriend kok udah gak ada ya?'],
@@ -170,8 +158,8 @@ const CHATS = [
       ['Shabey', '"I\'m eepy"'],
       ['Shabey', 'Must be very tired from your class yesterday ya'],
       ['Shabey', 'When you kissed me last night and this morn langsung fit lagi'],
-      ['Shabey', { img: 'marshall-d2-shabey' }],
       ['Shabey', "I'm so glad you're into ME, kakak"],
+      ['Shabey', { img: 'marshall-d2-shabey' }],
       ['Marshall', 'Can i go with you?'],
       ['Shabey', 'For whattttt????'],
       ['Shabey', 'Jangan usap-usap or anything nanti adek bawaannya mau nyender terus :('],
@@ -1001,7 +989,7 @@ const lastOf = c => { const m = c.msgs[c.msgs.length - 1]; return { t: m.t, text
       } else {
         const [H, M] = day.when.time.split(':').map(Number); base = new Date(now); base.setDate(base.getDate() - day.when.ago); base.setHours(H, M, 0, 0);
       }
-      day.msgs.forEach(([who, body], k) => c.msgs.push(mk(who, body, new Date(base.getTime() + k * 60000), fixed)));   // jam sesuai permintaan (≈20:00 / ≈08:00), tidak dipotong ke jam sekarang
+      day.msgs.forEach(([who, body], k) => c.msgs.push(mk(who, body, new Date(base.getTime() + k * (day.step || 60000)), fixed)));   // jam sesuai permintaan (Marshall: ≈14:37 / ≈14:46), tidak dipotong ke jam sekarang
     });
     c.last = lastOf(c);
   });
