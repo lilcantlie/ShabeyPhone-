@@ -21,9 +21,9 @@ const IG = {
   location: 'canary wharf',
   bio: ['rosewater قمر noun begins @ivoiwre ♥'],
   items: [
-    { img: 'assets/posts/post-1.jpg', caption: 'yuh 👺',                       ago: 2, likes: '1.284' },
-    { img: 'assets/posts/post-2.jpg', caption: 'huh abis anuin server',        ago: 6, likes: '962'   },
-    { img: 'assets/posts/post-3.jpg', caption: 'my sweetness baby @hagiel',    ago: 11, likes: '2.310' },
+    { img: 'assets/posts/post-1.jpg', caption: '',                             ago: 2, likes: '1.284' },
+    { img: 'assets/posts/post-2.jpg', caption: '',                             ago: 6, likes: '962'   },
+    { img: 'assets/posts/post-3.jpg', caption: '',                             ago: 11, likes: '2.310' },
     { img: 'assets/posts/post-4.jpg', caption: '',                             ago: 16, likes: '845'   },   // post 4–6: placeholder, ganti file & caption
     { img: 'assets/posts/post-5.jpg', caption: '',                             ago: 23, likes: '1.102' },
     { img: 'assets/posts/post-6.jpg', caption: '',                             ago: 31, likes: '1.536' },
