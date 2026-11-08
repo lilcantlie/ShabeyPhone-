@@ -58,7 +58,7 @@ const MAILS = [
   { from: 'Lokalverse', addr: 'Lokalverse@gmail.com', when: 'Monday', unread: true, subj: 'You invited to lokalverse project',
     pre: 'I would like to invite you to join the lokalverse project. Please let me know if you are interested.' },
   { from: 'GitHub', when: 'Yesterday', unread: true, subj: '[GitHub] A new sign-in to your account',
-    pre: 'Hey morfene! We noticed a new sign-in to your GitHub account from Canary Wharf, London. If this was you, you...' },
+    pre: 'Hey morfeme! We noticed a new sign-in to your GitHub account from Canary Wharf, London. If this was you, you...' },
   { from: 'Google', when: '02:14', unread: false, subj: 'Security alert',
     pre: 'A new sign-in on Mac OS. We notice a new sign-in to your Google Account on a Mac OS device.' },
 ];
@@ -74,14 +74,14 @@ Even now, when we're apart, you're always in my thoughts. Whether it's a quiet m
 ];
 
 const CALLS = [ // ago = berapa hari lalu
-  { name: 'Baby',    type: 'missed', n: 4, ago: 0, time: '03:48' },
-  { name: 'Maxton',  type: 'out',    n: 1, ago: 0, time: '02:10' },
-  { name: 'Baby',    type: 'missed', n: 3, ago: 1, time: '22:15' },
-  { name: 'Evander', type: 'out',    n: 1, ago: 1, time: '20:40' },
-  { name: 'Baby',    type: 'missed', n: 2, ago: 1, time: '12:05' },
-  { name: 'Eiser',   type: 'out',    n: 1, ago: 2, time: '21:30' },
-  { name: 'Baby',    type: 'missed', n: 5, ago: 3, time: '19:20' },
-  { name: 'Maxton',  type: 'out',    n: 1, ago: 3, time: '16:00' },
+  { name: 'Marshall,    type: 'missed', n: 4, ago: 0, time: '03:48' },
+  { name: 'Mommy',      type: 'out',    n: 1, ago: 0, time: '02:10' },
+  { name: 'Marshall',   type: 'missed', n: 3, ago: 1, time: '22:15' },
+  { name: 'Shanina',    type: 'out',    n: 1, ago: 1, time: '20:40' },
+  { name: 'Marshall',   type: 'missed', n: 2, ago: 1, time: '12:05' },
+  { name: 'Geova',      type: 'out',    n: 1, ago: 2, time: '21:30' },
+  { name: 'Marshall',   type: 'missed', n: 5, ago: 3, time: '19:20' },
+  { name: 'Mommy',      type: 'out',    n: 1, ago: 3, time: '16:00' },
 ];
 const CONTACTS = ['Baby', 'Eiser', 'Evander', 'Keenan', 'Kianabelle', 'Maxton', 'Miyuka'];
 
